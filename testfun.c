@@ -1,0 +1,6 @@
+
+
+int	testfun(void)
+{
+
+}
