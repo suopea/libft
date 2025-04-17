@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <limits.h>
 #include <ctype.h>
+#include <string.h>
 #include "libft.h"
 
 void	test(input)
 {
-	if (ft_FUNCTION() == (0 != FUNCTION()))
+	if (ft_FUNCTION() == FUNCTION())
 	{
 		printf("success\n");
 	}
