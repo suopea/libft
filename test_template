@@ -1,4 +1,21 @@
+#include <stdio.h>
+#include <limits.h>
+#include "libft.h"
+
+void	test(input, correct)
+{
+	if (FUNCTION() == correct)
+	{
+		printf("success\n");
+	}
+	else
+	{
+		printf("\n");
+	}
+}
+
 int main(void)
 {
+	test();
 	return(0);	
 }
