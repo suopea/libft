@@ -5,5 +5,9 @@
         "ssuopea",
         "Werror",
         "Wextra"
-    ]
+    ],
+    "files.associations": {
+        "ctype.h": "c",
+        "limits.h": "c"
+    }
 }
