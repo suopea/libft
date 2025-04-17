@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 14:19:42 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/17 12:20:53 by ssuopea          ###   ########.fr       */
+/*   Created: 2025/04/17 12:30:48 by ssuopea           #+#    #+#             */
+/*   Updated: 2025/04/17 12:33:11 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-	int	ft_isalpha(int c);
-	int	ft_isalnum(int c);
-	int	ft_isdigit(int c);
-
-#endif
+int	ft_isalnum(int c)
+{
+	if (('a' <= c && c <= 'z')
+		|| ('A' <= c && c <= 'Z')
+		|| ('0' <= c && c <= '9'))
+	{
+		return (1);
+	}
+	else
+		return (0);
+}

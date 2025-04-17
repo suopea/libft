@@ -5,13 +5,13 @@
 
 void	test(input)
 {
-	if (ft_FUNCTION() == FUNCTION())
+	if (ft_FUNCTION() == (0 != FUNCTION()))
 	{
 		printf("success\n");
 	}
 	else
 	{
-		printf("\n");
+		printf("FAILED :(\n");
 	}
 }
 
