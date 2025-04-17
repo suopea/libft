@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <limits.h>
+#include <ctype.h>
 #include "libft.h"
 
-void	test(input, correct)
+void	test(input)
 {
-	if (FUNCTION() == correct)
+	if (ft_FUNCTION() == FUNCTION())
 	{
 		printf("success\n");
 	}
