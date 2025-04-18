@@ -6,13 +6,9 @@
 void	test(int c)
 {
 	if (ft_isalnum(c) == (0 != isalnum(c)))
-	{
-		printf("%c success\n", c);
-	}
+		printf("%c (%i) success\n", c, c);
 	else
-	{
-		printf("%c FAILED :(\n", c);
-	}
+		printf("%c (%i) FAILED :(\n", c, c);
 }
 
 int main(void)

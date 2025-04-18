@@ -6,13 +6,9 @@
 void	test(int c)
 {
 	if (ft_isalpha(c) == (isalpha(c) != 0))
-	{
-		printf("%c success\n", c);
-	}
+		printf("%c (%i) success\n", c, c);
 	else
-	{
-		printf("%c FAIL :(\n", c);
-	}
+		printf("%c (%i) FAILED :(\n", c, c);
 }
 
 int main(void)

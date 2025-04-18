@@ -6,13 +6,9 @@
 void	test(int c)
 {
 	if (ft_isdigit(c) == (0 != isdigit(c)))
-	{
-		printf("success\n");
-	}
+		printf("%c (%i) success\n", c, c);
 	else
-	{
-		printf("%c FAIL :(\n", c);
-	}
+		printf("%c (%i) FAILED :(\n", c, c);
 }
 
 int main(void)
