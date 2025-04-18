@@ -15,8 +15,8 @@ all: $(NAME)
 asd:
 	@ echo $(TEST)
 
-test: $(NAME) test_$(TEST).c clean 
-	@ cc $(FLAGS) test_$(TEST).c $(NAME) -lbsd
+test: $(NAME) ./tests/test_$(TEST).c clean 
+	@ cc $(FLAGS) ./tests/test_$(TEST).c $(NAME) -lbsd
 	@ ./a.out
 	@ rm a.out
 
@@ -28,4 +28,4 @@ fclean: clean
 
 re: fclean all
 
-.SILENT:
+# .SILENT:

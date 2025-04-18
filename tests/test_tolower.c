@@ -2,17 +2,17 @@
 #include <limits.h>
 #include <ctype.h>
 #include <string.h>
-#include "libft.h"
+#include "../libft.h"
 
 void	test(int c)
 {
-	if (ft_toupper(c) == toupper(c))
+	if (ft_tolower(c) == tolower(c))
 	{
 		printf("%c success\n", c);
 	}
 	else
 	{
-		printf("%c FAILED :(%c)\n", c, ft_toupper(c));
+		printf("%c FAILED :(%c)\n", c, ft_tolower(c));
 	}
 }
 
@@ -30,7 +30,7 @@ int main(void)
 	test('Z');
 	test('A' - 1);
 	test('Z' + 1);
-	test('8');
-	test(-100);
 	return(0);	
+	test(-100);
+	test('A' + 256);
 }

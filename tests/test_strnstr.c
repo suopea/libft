@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <bsd/string.h>
-#include "libft.h"
+#include "../libft.h"
 
 // cc ft_strnstr.c test_strnstr.c ft_strlen.c -lbsd && ./a.out
 

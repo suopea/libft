@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <string.h>
 #include <ctype.h>
-#include "libft.h"
+#include "../libft.h"
 
 void	test(char *c)
 {

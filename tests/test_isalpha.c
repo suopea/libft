@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <limits.h>
 #include <ctype.h>
-#include "libft.h"
+#include "../libft.h"
 
 void	test(int c)
 {
-	if (ft_isascii(c) == (0 != isascii(c)))
+	if (ft_isalpha(c) == (isalpha(c) != 0))
 		printf("%c (%i) success\n", c, c);
 	else
 		printf("%c (%i) FAILED :(\n", c, c);
@@ -14,26 +14,22 @@ void	test(int c)
 int main(void)
 {
 	test('a');
-	test('z');
-	test('A');
-	test('Z');
 	test('b');
+	test('A');
 	test('B');
+	test('z');
+	test('z' + 1);
+	test('Z' + 1);
+	test('a' - 1);
+	test('A' - 1);
+	test('1');
+	test('\n');
+	test('\0');
 	test('0');
-	test('5');
-	test('9');
-	test('\t');
-	test(10);
-	test(126);
-	test(127);
-	test(128);
-	test(129);
-	test(255);
 	test(-1);
-	test(256);
-	test(257);
-	test(0);
+	test(255);
 	test(-100);
 	test('A' + 256);
+	test('0' + 256);
 	return(0);	
 }

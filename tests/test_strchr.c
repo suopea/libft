@@ -2,13 +2,13 @@
 #include <limits.h>
 #include <ctype.h>
 #include <string.h>
-#include "libft.h"
+#include "../libft.h"
 
 void	test(const char *s, int c)
 {
 	printf("finding %c from %s:\n", c, s);
 	printf(" fn: %p\nlib: %p\n\n", 
-		ft_strrchr(s, c), strrchr(s, c));
+		ft_strchr(s, c), strchr(s, c));
 }
 
 int main(void)
@@ -20,9 +20,9 @@ int main(void)
 	test(empty_string, 'b');
 	test(empty_string, 0);
 	test(string, 'e');
-	test("asdef", 'e');
-	test(string, 'x'); 
+	test(string, 'x');
 	test(string, 'a');
+	test(string, 'a' + 256);
 	test(string, 0);
 	return(0);	
 }

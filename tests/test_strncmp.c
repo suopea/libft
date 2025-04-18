@@ -2,7 +2,7 @@
 #include <limits.h>
 #include <string.h>
 #include <ctype.h>
-#include "libft.h"
+#include "../libft.h"
 
 void	test(const char *s1, const char *s2, size_t n)
 {
