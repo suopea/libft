@@ -1,18 +1,31 @@
-NAME = ex_libft
-SRC = $(wildcard *.c)
+NAME = libft.a
+SRC = $(wildcard ft_*.c)
 OBJ = $(SRC:.c=.o) 
-
+TEST = default
+FLAGS = -Wall -Wextra -Werror 
 
 $(NAME): $(OBJ)
-	cc -Wall -Wextra -Werror $(OBJ) -o $(NAME)
-	@ rm -f *.o
-	@ rm -f *.gch
-	@ ./a.out
-	@ echo "\n\nFIX MAKEFILE BEFORE SUBMISSION"
+	ar rcs $(NAME) $^	
 
 all: $(NAME)
 
 %.o: %.c
-	$(COMPILER) $(CFLAGS) -c $<
+	cc $(FLAGS) -c $<
 
-.PHONY: all
+asd:
+	@ echo $(TEST)
+
+test: $(NAME) test_$(TEST).c clean 
+	@ cc $(FLAGS) test_$(TEST).c $(NAME) -lbsd
+	@ ./a.out
+	@ rm a.out
+
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+# .SILENT:

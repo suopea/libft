@@ -31,5 +31,6 @@ int main(void)
 	test('A' - 1);
 	test('Z' + 1);
 	test('8');
+	test(-100);
 	return(0);	
 }

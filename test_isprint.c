@@ -23,5 +23,7 @@ int main(void)
 	test(0);
 	test(14);
 	test(128);
+	test(-100);
+	test('A' + 256);
 	return(0);	
 }

@@ -37,5 +37,7 @@ int main(void)
 	test(256);
 	test(257);
 	test(0);
+	test(-100);
+	test('A' + 256);
 	return(0);	
 }

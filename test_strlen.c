@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
 #include <string.h>
 #include <ctype.h>
@@ -21,6 +22,6 @@ int main(void)
 	test("");
 	test("asd");
 	test("asdf fdsafdas ");
-	test("");
+	test(NULL);
 	return(0);	
 }

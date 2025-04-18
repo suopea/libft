@@ -6,12 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:23:10 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/17 12:26:20 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/18 21:55:31 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
+	c = (unsigned char) c;
 	if (c < '0' || '9' < c)
 		return (0);
 	else

@@ -29,6 +29,8 @@ int main(void)
 	test('\t');
 	test(10);
 	test(255);
-	test('\%');
+	test(-100);
+	test('A' + 256);
+	test('0' + 256);
 	return(0);	
 }
