@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 14:19:42 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/18 12:06:21 by ssuopea          ###   ########.fr       */
+/*   Created: 2025/04/18 11:32:08 by ssuopea           #+#    #+#             */
+/*   Updated: 2025/04/18 12:03:10 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+char	*ft_strchr(const char *s, int c)
+{
+	int	i;
 
-int		ft_isalpha(int c);
-char	*ft_strrchr(const char *s, int c);
-char	*ft_strchr(const char *s, int c);
-int		ft_tolower(int c);
-int		ft_isupper(int c);
-size_t	ft_strlen(char *c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_isalnum(int c);
-int		ft_isdigit(int c);
-
-#endif
+	c = (unsigned char) c;
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	if (s[i] == c)
+		return ((char *)s + i);
+	else
+		return (0);
+}
