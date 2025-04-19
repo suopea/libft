@@ -2,6 +2,7 @@ NAME = libft.a
 SRC = $(wildcard ft_*.c)
 OBJ = $(SRC:.c=.o) 
 TEST = default
+TEST_FILE = ./tests/test_$(TEST).c
 FLAGS = -Wall -Wextra -Werror 
 
 $(NAME): $(OBJ)
@@ -12,16 +13,23 @@ all: $(NAME)
 %.o: %.c
 	cc $(FLAGS) -c $<
 
-asd:
-	@ echo $(TEST)
-
-test: $(NAME) ./tests/test_$(TEST).c clean 
-	@ cc $(FLAGS) ./tests/test_$(TEST).c $(NAME) -lbsd
+test: $(NAME) $(TEST_FILE) clean 
+	@ cc $(FLAGS) $(TEST_FILE) $(NAME) -lbsd
+	@ cat $(TEST_FILE) | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
+	@ valgrind --show-leak-kinds=all --track-fds=yes ./a.out
+	@ echo "\n\ntesting $(TEST)\n\nnorminette:\n"
+	@ norminette ft_$(TEST).c 
+	@ echo "\n\n"
 	@ ./a.out
 	@ rm a.out
 
+debug: $(NAME) $(TEST_FILE) clean 
+	@ cc $(FLAGS) $(TEST_FILE) $(NAME) -g -lbsd
+	@ gdb -tui ./a.out
+	@ rm a.out
+
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
