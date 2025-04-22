@@ -16,6 +16,7 @@
 # include <unistd.h>
 
 int		ft_isalpha(int c);
+int	ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
