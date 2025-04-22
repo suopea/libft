@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 16:10:19 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/21 16:40:34 by ssuopea          ###   ########.fr       */
+/*   Created: 2025/04/21 16:42:23 by ssuopea           #+#    #+#             */
+/*   Updated: 2025/04/22 10:21:10 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 	char	*ptr;
-	
+
 	ptr = s;
 	i = 0;
 	while (i < n)
 	{
-		ptr[i] = 0;
+		ptr[i] = c;
 		i++;
 	}
+	return (s);
 }
