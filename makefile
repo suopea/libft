@@ -28,6 +28,9 @@ debug: $(NAME) $(TEST_FILE) clean
 	@ gdb -tui ./a.out
 	@ rm a.out
 
+bclean:
+	@ rm -f a.out libft.h.gch
+
 clean:
 	rm -f $(OBJ)
 
