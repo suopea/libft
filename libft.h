@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:19:42 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/21 16:41:57 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/22 10:27:48 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 
 int		ft_isalpha(int c);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
