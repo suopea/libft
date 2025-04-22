@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:19:42 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 14:26:04 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/22 16:10:20 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <unistd.h>
 
 int		ft_isalpha(int c);
-int	ft_atoi(const char *nptr);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
