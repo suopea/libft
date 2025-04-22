@@ -6,19 +6,14 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:30:48 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/18 21:55:33 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/22 15:11:48 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
 	c = (unsigned char) c;
-	if (('a' <= c && c <= 'z')
-		|| ('A' <= c && c <= 'Z')
-		|| ('0' <= c && c <= '9'))
-	{
-		return (1);
-	}
-	else
-		return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));	
 }

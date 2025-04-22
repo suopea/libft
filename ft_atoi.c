@@ -6,9 +6,11 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:51:28 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 15:06:21 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/22 15:13:37 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -27,7 +29,7 @@ int	ft_atoi(const char *nptr)
 		sign *= -1;
 	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
-	while (isdigit(nptr[i]))
+	while (ft_isdigit(nptr[i]))
 	{
 		temp += nptr[i] - '0';
 		temp *= 10;

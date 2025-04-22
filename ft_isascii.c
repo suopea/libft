@@ -6,15 +6,12 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:47:40 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/18 21:55:32 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/22 15:16:45 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
 	c = (unsigned char) c;
-	if (0 <= c && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (0 <= c && c <= 127);
 }
