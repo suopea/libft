@@ -24,7 +24,7 @@ test: $(NAME) $(TEST_FILE) clean
 	@ rm a.out
 
 debug: $(NAME) $(TEST_FILE) clean 
-	@ cc $(FLAGS) $(TEST_FILE) $(NAME) -g -lbsd
+	@ cc $(FLAGS) $(TEST_FILE) ft_*.c -g -lbsd
 	@ gdb -tui ./a.out
 	@ rm a.out
 

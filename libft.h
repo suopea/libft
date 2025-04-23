@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:19:42 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 16:10:20 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/23 15:25:57 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 
 int		ft_isalpha(int c);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_atoi(const char *nptr);
