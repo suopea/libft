@@ -26,7 +26,6 @@ test: $(NAME) $(TEST_FILE) clean
 debug: $(NAME) $(TEST_FILE) clean 
 	@ cc $(FLAGS) $(TEST_FILE) ft_*.c -g -lbsd
 	@ gdb -tui ./a.out
-	@ rm a.out
 
 bclean:
 	@ rm -f a.out libft.h.gch

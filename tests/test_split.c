@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <limits.h>
+#include <ctype.h>
+#include <string.h>
+#include "../libft.h"
+
+void	print_array(char **array)
+{
+	int	i = 0;
+	while (array[i])
+	{
+		printf("%i: '%s'\n", i, array[i]);
+		free(array[i]);
+		i++;
+	}
+	printf("%i: %p\n\n", i, array[i]);
+	free(array);
+}
+
+void	test(char const *s, char c)
+{
+	printf("'%s' delimited by '%c':\n", s, c);
+	char	**array = ft_split(s, c);
+	print_array(array);
+}
+
+int main(void)
+{
+	test("   one    two three   ", ' ');
+	test("one    two three   ", ' ');
+	test("   one    two three", ' ');
+	test("", '1');
+	test("aaaaa", 'a');
+	test("no delimiter", 'x');
+
+	printf("\nshould empty string return an array of size 1 or 2????\n");
+}
