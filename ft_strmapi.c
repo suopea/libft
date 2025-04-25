@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/25 15:49:11 by ssuopea           #+#    #+#             */
+/*   Updated: 2025/04/25 16:27:56 by ssuopea          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*
+	Applies the function f to each character of the
+	string s, passing its index as the first argument
+	and the character itself as the second. A new
+	string is created (using malloc(3)) to store the
+	results from the successive applications of f.
+*/
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*out;
+	int		i;
+
+	out = malloc(ft_strlen((char *)s) + 1);
+	if (!out)
+		return (0);
+	i = 0;
+	while (s[i])
+	{
+		out[i] = f(i, s[i]);
+		i++;
+	}
+	out[i] = 0;
+	return (out);
+}
