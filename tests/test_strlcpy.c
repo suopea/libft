@@ -14,11 +14,12 @@ void	test(const char *src, size_t size)
 		printf("%s: KO\n\nlib: '%s', %zu\n ft: '%s', %zu\n\n", 
 			src, lib_copy, lib_size, ft_copy, ft_size);
 	else
-		printf("string: %s\n  size: %zu\nsuccess\n\n", src, size);
+		printf("string: '%s'\n  size: %zu\nsuccess\n\n", src, size);
 }
 
 int	main(void)
 {
+	test("", 0);	
 	test("", 3);	
 	test("asd", 0);	
 	test("asd", 1);	
@@ -30,7 +31,4 @@ int	main(void)
 	test("asdfasdfasdf", 9);	
 	test("asdfasdfasdf", 10);	
 	test("asdfasdfasdf", 11);	
-	// test("asdfasdfasdf", 12);	
-
-	printf("\n\ndest size is 10\n");
 }

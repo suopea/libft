@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 20:10:13 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 13:32:58 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 18:45:05 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*int_alloc(long int n, int *place);
+char	*int_alloc(long int n, int *place); // TODO better name
 long	deal_with_sign(long temp, char *out);
 
 char	*ft_itoa(int n)

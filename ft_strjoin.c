@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:08:50 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 16:31:16 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:20:26 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Allocates memory and returns a new string,
 which is the result of concatenating s1 and s2
 */
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2) // TODO leaks
 {
 	char		*out;
 	size_t		s1_len;

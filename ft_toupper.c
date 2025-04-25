@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:27:23 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/18 21:40:45 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:49:35 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@ int	ft_toupper(int c)
 	c = (unsigned char) c;
 	if ('a' <= c && c <= 'z')
 		return (c - ('a' - 'A'));
-	else
-		return (c);
+	return (c);
 }

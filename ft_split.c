@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:14:34 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/24 16:53:27 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:16:29 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 static size_t	number_of_words(const char *s, char c);
 static size_t	length_of_word(const char *s, char c);
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c) // TODO if a word malloc fails, free everything
 {
 	size_t	read_pos;
 	size_t	word_len;
-	size_t	word_index;
+	size_t	word_index; // TODO array_index?
 	char	**out;
 
 	word_index = 0;
@@ -47,8 +47,7 @@ static size_t	length_of_word(const char *s, char c)
 {
 	if (ft_strchr(s, c))
 		return (ft_strchr(s, c) - s);
-	else
-		return (ft_strchr(s, 0) - s);
+	return (ft_strchr(s, 0) - s);
 }
 
 static size_t	number_of_words(const char *s, char c)

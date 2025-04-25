@@ -6,11 +6,11 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:19:42 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 16:28:01 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:50:19 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#ifndef LIBFT_H // TODO do I want a better order for these?
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>

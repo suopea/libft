@@ -16,7 +16,7 @@ all: $(NAME)
 test: $(NAME) $(TEST_FILE) clean 
 	@ cc $(FLAGS) $(TEST_FILE) $(NAME) -lbsd
 	@ cat $(TEST_FILE) | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
-	@ valgrind --show-leak-kinds=all --track-fds=yes ./a.out || grep "lost"
+	@ valgrind --show-leak-kinds=all --track-fds=yes ./a.out
 	@ echo "\n\n"
 	@ ./a.out
 	@ echo "\n\ntesting $(TEST)\n\nnorminette:\n"

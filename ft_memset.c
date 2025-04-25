@@ -6,14 +6,15 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 16:42:23 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/24 16:18:40 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:06:54 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	fills the first n bytes of the memory area pointed to by s with byte c
+	fills the first n bytes of the memory area 
+	pointed to by s with byte c
 	returns a pointer to memory area s
 */
 

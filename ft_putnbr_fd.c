@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:27:59 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 15:03:14 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:09:12 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd) // TODO can't use itoa, leaks
 {
 	write(fd, ft_itoa(n), ft_strlen(ft_itoa(n)));
 }

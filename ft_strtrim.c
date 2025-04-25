@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:30:51 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/23 16:02:52 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:44:29 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set) // TODO maybe refactor, you can use substr
 {
 	int		start;
 	int		pos;
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	pos = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	out = ft_calloc(ft_strlen((char *)s1) - start + 1, 1);
+	out = ft_calloc(ft_strlen((char *)s1) - start + 1, 1); // TODO maybe don't waste memory
 	if (!out)
 		return (0);
 	while (s1[start + pos])

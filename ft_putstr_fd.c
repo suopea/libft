@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:20:33 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 14:21:16 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:10:08 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd) // TODO null
 {
 	write(fd, s, ft_strlen(s));
 }

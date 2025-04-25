@@ -14,6 +14,7 @@ void	test(const void *s1, const void *s2, size_t n)
 
 int main(void)
 {
+	test("\377bcde", "abXde", 5);
 	test("abbee", "abcde", 0);
 	test("abbee", "abcde", 5);
 	test("abcde", "abcde", 4);

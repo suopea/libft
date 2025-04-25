@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 15:49:11 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 16:27:56 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:27:39 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@
 	results from the successive applications of f.
 */
 
+// TODO check both s and f for null?
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*out;
 	int		i;
-
 	out = malloc(ft_strlen((char *)s) + 1);
 	if (!out)
 		return (0);

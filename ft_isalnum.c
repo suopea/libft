@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:30:48 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 15:11:48 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 18:36:40 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_isalnum(int c)
 {
-	c = (unsigned char) c;
+	c = (unsigned char) c; // TODO
 	return (ft_isalpha(c) || ft_isdigit(c));	
 }

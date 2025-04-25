@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 14:23:53 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/24 15:30:49 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:26:18 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 	copies up to (size - 1) chars from the 0-terminated string src to dst,
 	0-terminating the result
 */
+
+// TODO emtpy string size 0 doesn't work
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

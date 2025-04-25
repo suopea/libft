@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:44:57 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 16:10:16 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:48:39 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ Allocates memory using malloc and returns a substring
 from the string s. Substring starts at start and has 
 a maximum length of len
 */
+
+// TODO what if start is bigger than original string
+// TODO check for null?
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

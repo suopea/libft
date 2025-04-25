@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:23:03 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 14:23:59 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/25 19:07:54 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd) // TODO null
 {
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
