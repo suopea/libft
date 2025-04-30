@@ -20,7 +20,8 @@ int main(void)
 	test(empty_string, 'b');
 	test(empty_string, 0);
 	test(string, 'e');
-	test("asdef", 'e');
+	test("a\200sdef", 'e');
+	test("a\200sdef", '\200');
 	test(string, 'x'); 
 	test(string, 'a');
 	test(string, 0);

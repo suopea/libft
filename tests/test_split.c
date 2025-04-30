@@ -32,6 +32,4 @@ int main(void)
 	test("", '1');
 	test("aaaaa", 'a');
 	test("no delimiter", 'x');
-
-	printf("\nshould empty string return an array of size 1 or 2????\n");
 }

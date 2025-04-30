@@ -6,12 +6,11 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:51:53 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 15:16:08 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/29 12:58:04 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	c = (unsigned char) c;
 	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
 }

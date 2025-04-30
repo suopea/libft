@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 20:10:13 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 18:45:05 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 13:40:57 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*int_alloc(long int n, int *place); // TODO better name
+char	*find_len_and_alloc(long int n, int *place);
 long	deal_with_sign(long temp, char *out);
 
 char	*ft_itoa(int n)
@@ -25,7 +25,7 @@ char	*ft_itoa(int n)
 	temp = n;
 	i = 0;
 	place = 1;
-	out = int_alloc(n, &place);
+	out = find_len_and_alloc(n, &place);
 	if (!out)
 		return (0);
 	temp = deal_with_sign(temp, out);
@@ -45,6 +45,7 @@ char	*ft_itoa(int n)
 
 long	deal_with_sign(long temp, char *out)
 {
+	out[0] = 0;
 	if (temp < 0)
 	{
 		out[0] = '-';
@@ -53,20 +54,20 @@ long	deal_with_sign(long temp, char *out)
 	return (temp);
 }
 
-char	*int_alloc(long int n, int *place)
+char	*find_len_and_alloc(long int n, int *place)
 {
-	int		i;
+	int		len;
 
-	i = 1;
+	len = 1;
 	if (n < 0)
 	{
 		n = -n;
-		i++;
+		len++;
 	}
 	while (*place <= n / 10)
 	{
 		*place *= 10;
-		i++;
+		len++;
 	}
-	return ((char *)malloc(i + 1));
+	return ((char *)malloc(len + 1));
 }

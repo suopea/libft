@@ -14,12 +14,12 @@ all: $(NAME)
 	cc $(FLAGS) -c $<
 
 test: $(NAME) $(TEST_FILE) clean 
-	@ cc $(FLAGS) $(TEST_FILE) $(NAME) -lbsd
+	@ cc $(FLAGS) $(TEST_FILE) $(NAME) -lbsd -g
 	@ cat $(TEST_FILE) | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
-	@ valgrind --show-leak-kinds=all --track-fds=yes ./a.out
+	@ valgrind --show-leak-kinds=all --track-fds=yes --track-origins=yes ./a.out
 	@ echo "\n\n"
 	@ ./a.out
-	@ echo "\n\ntesting $(TEST)\n\nnorminette:\n"
+	@ echo "\n\ntests/test_$(TEST).c\n\nnorminette:\n"
 	@ norminette ft_$(TEST).c 
 	@ rm a.out
 

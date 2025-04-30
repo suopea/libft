@@ -4,7 +4,9 @@
 
 void	test(int n)
 {
-	printf("%i: '%s'\n", n, ft_itoa(n)); // TODO free
+	char	*out = ft_itoa(n);
+	printf("%i: '%s'\n", n, out);
+	free(out);
 }
 
 int main(void)

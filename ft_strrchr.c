@@ -6,18 +6,17 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 12:05:53 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 19:37:28 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 11:00:50 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0; // TODO strlen?
-	c = (unsigned char) c;
-	while (s[i]) 
-		i++;
+	i = ft_strlen((char *) s);
 	while (i >= 0)
 	{
 		if (c == s[i])

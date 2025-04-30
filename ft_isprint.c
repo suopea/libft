@@ -6,12 +6,11 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:37:54 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 18:39:54 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/29 12:58:20 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	c = (unsigned char) c;
 	return (32 <= c && c <= 126);
 }

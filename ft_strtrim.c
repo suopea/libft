@@ -6,37 +6,38 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:30:51 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 19:44:29 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 12:06:07 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set) // TODO maybe refactor, you can use substr
+void	assign_range(char *s1, char *set, size_t *start, size_t *out_len);
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
-	int		pos;
-	int		ahead;
+	size_t	start;
+	size_t	out_len;
 	char	*out;
 
-	start = 0;
-	pos = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	out = ft_calloc(ft_strlen((char *)s1) - start + 1, 1); // TODO maybe don't waste memory
+	assign_range((char *)s1, (char *)set, &start, &out_len);
+	out = malloc(out_len + 1);
 	if (!out)
-		return (0);
-	while (s1[start + pos])
-	{
-		ahead = 0;
-		while (ft_strchr(set, s1[start + pos + ahead]))
-		{
-			if (s1[start + pos + ahead] == 0)
-				return (out);
-			ahead++;
-		}
-		out[pos] = s1[start + pos];
-		pos++;
-	}
+		return (NULL);
+	ft_strlcpy(out, s1 + start, out_len + 1);
 	return (out);
+}
+
+void	assign_range(char *s1, char *set, size_t *start, size_t *out_len)
+{
+	size_t	i;
+
+	i = 0;
+	while (ft_strchr(set, s1[i]))
+		i++;
+	*start = i;
+	i = ft_strlen(s1);
+	while (ft_strchr(set, s1[i]) && *start < i)
+		i--;
+	*out_len = i + 1 - *start;
 }
