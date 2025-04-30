@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:14:34 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 11:03:29 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:06:52 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	**ft_split(char const *s, char c)
 	read_pos = 0;
 	out = calloc(number_of_words(s, c) + 1, sizeof(char *));
 	if (!out)
-		return (0);
+		return (NULL);
 	while (s[read_pos])
 	{
 		if (s[read_pos] == c)

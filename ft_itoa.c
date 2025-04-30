@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 20:10:13 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 13:40:57 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:06:37 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_itoa(int n)
 	place = 1;
 	out = find_len_and_alloc(n, &place);
 	if (!out)
-		return (0);
+		return (NULL);
 	temp = deal_with_sign(temp, out);
 	if (out[0] == '-')
 		i++;
