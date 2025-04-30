@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:27:59 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 10:30:01 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 16:21:48 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int nb, int fd)
 	i = nb;
 	if (nb < 0)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		i = -i;
 	}
 	if (i >= 10)

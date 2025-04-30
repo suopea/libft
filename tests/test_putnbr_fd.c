@@ -5,8 +5,9 @@
 
 void	test(int n, int fd)
 {
-	printf("\n%i: ", n);
+	printf("\n%i: '", n);
 	fflush(stdout);
+	printf("'");
 	ft_putnbr_fd(n, fd);
 }
 
@@ -15,6 +16,7 @@ int main(void)
 	test(0, 1);
 	test(1, 1);
 	test(-1, 1);
+	test(-5, 1);
 	test(-9, 1);
 	test(-10, 1);
 	test(-11, 1);
