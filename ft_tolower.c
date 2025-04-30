@@ -6,11 +6,11 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:38:20 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 19:49:20 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 16:16:05 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c) 
+int	ft_tolower(int c)
 {
 	c = (unsigned char) c;
 	if ('A' <= c && c <= 'Z')

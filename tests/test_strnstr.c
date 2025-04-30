@@ -18,6 +18,8 @@ int main(void)
 {
 	printf("returned addresses:\n\n");
 	test("haystack", "needle", 20);
+	test("haystack needle haystack", "needle", 0);
+	test("haystack needle haystack", "needle", 1);
 	test("haystack needle haystack", "needle", 8);
 	test("haystack needle haystack", "needle", 13);
 	test("haystack needle haystack", "needle", 14);

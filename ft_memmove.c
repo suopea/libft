@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:50:48 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/22 12:15:45 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:27:46 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static void	*revcopy(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	if (!src || !dest)
+		return (NULL);
 	if (src == dest)
 		return (dest);
 	if (src > dest)

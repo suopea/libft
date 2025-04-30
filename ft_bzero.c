@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 16:10:19 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/21 16:40:34 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 16:15:29 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*ptr;
-	
+
+	if (!s)
+		return ;
 	ptr = s;
 	i = 0;
 	while (i < n)

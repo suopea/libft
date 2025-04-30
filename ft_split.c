@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:14:34 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 15:06:52 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:19:50 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	number_of_words(const char *s, char c);
+static int		number_of_words(const char *s, char c);
 static size_t	length_of_word(const char *s, char c);
 static void		*free_everything(char **out);
 
@@ -25,7 +25,7 @@ char	**ft_split(char const *s, char c)
 
 	array_index = 0;
 	read_pos = 0;
-	out = calloc(number_of_words(s, c) + 1, sizeof(char *));
+	out = ft_calloc(number_of_words(s, c) + 1, sizeof(char *));
 	if (!out)
 		return (NULL);
 	while (s[read_pos])
@@ -52,11 +52,13 @@ static size_t	length_of_word(const char *s, char c)
 	return (ft_strchr(s, 0) - s);
 }
 
-static size_t	number_of_words(const char *s, char c)
+static int	number_of_words(const char *s, char c)
 {
-	size_t	i;
-	size_t	count;
+	int	i;
+	int	count;
 
+	if (!s)
+		return (-1);
 	i = 0;
 	count = 0;
 	while (s[i])

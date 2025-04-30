@@ -6,9 +6,11 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:32:08 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 19:18:22 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:43:41 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 	return a pointer to the first occurrence of char c in string s
@@ -19,7 +21,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	c = (unsigned char) c;
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;

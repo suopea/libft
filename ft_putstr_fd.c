@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:20:33 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/29 13:23:51 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:35:38 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
-		return;
 	write(fd, s, ft_strlen(s));
 }

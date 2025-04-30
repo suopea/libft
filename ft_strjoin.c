@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:08:50 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 10:46:46 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:25:04 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t		s1_len;
 	size_t		s2_len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen((char *)s1);
 	s2_len = ft_strlen((char *)s2);
 	out = malloc(s1_len + s2_len + 1);

@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:30:51 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 12:06:07 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:24:12 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	out_len;
 	char	*out;
 
+	if (!s1 || !set)
+		return (NULL);
 	assign_range((char *)s1, (char *)set, &start, &out_len);
 	out = malloc(out_len + 1);
 	if (!out)

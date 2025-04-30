@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 16:42:23 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 19:06:54 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/04/30 15:28:37 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 	char	*ptr;
 
+	if (!s)
+		return (NULL);
 	ptr = s;
 	i = 0;
 	while (i < n)
