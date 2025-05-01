@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 14:23:53 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/01 11:05:33 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 17:06:48 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	else
 		len = ft_strlen(src);
 	i = 0;
-	while (i + 1 < size && size > 0)
+	while (i + 1 < size && size > 0 && src[i])
 	{
 		dst[i] = src[i];
 		i++;

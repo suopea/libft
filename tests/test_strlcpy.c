@@ -19,6 +19,7 @@ void	test(const char *src, size_t size)
 
 int	main(void)
 {
+	test("asd", -1);	
 	test("asd", 0);	
 	test("asd", 1);	
 	test("asd", 2);	
