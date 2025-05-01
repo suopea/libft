@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:44:57 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 13:50:03 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 12:34:07 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,16 @@ a maximum length of len
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*out;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
-	if (start > ft_strlen((char *) s))
+	if (start > ft_strlen(s))
 		len = 0;
+	else if (start + len > ft_strlen(s))
+		len = ft_strlen(s);
 	out = malloc(len + 1);
 	if (!out)
 		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		out[i] = s[start + i];
-		i++;
-	}
-	out[i] = 0;
+	ft_strlcpy(out, s + start, len + 1);
 	return (out);
 }

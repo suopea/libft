@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:22:24 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 14:47:47 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 12:22:44 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*out;
+	size_t	total;
 
-	if ((unsigned long long)(nmemb * size) != nmemb * size
-		|| !nmemb || !size)
-		return (NULL);
-	out = malloc(size * nmemb);
+	total = nmemb * size;
+	if (!nmemb || !size || total / nmemb != size)
+		return (malloc(1));
+	out = malloc(total);
 	if (!out)
 		return (NULL);
 	ft_bzero(out, size * nmemb);

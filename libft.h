@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:19:42 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 10:30:54 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 10:56:17 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-size_t	ft_strlen(char *c);
+size_t	ft_strlen(const char *c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_isalnum(int c);

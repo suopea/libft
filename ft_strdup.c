@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:51:03 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 15:37:52 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 12:26:25 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,5 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*out;
-	int		i;
-
-	if (!s)
-		return (NULL);
-	out = malloc(ft_strlen((char *)s) + 1);
-	if (!out)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		out[i] = s[i];
-		i++;
-	}
-	out[i] = 0;
-	return (out);
+	return (ft_substr(s, 0, ft_strlen(s)));
 }

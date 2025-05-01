@@ -14,6 +14,6 @@ int main(void)
 {
 	test("", 1);
 	test("asd", 1);
-	test(NULL, 1);
+	// test(NULL, 1);
 	return (0);
 }

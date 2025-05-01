@@ -6,14 +6,14 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 20:10:13 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 15:06:37 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 10:45:14 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*find_len_and_alloc(long int n, int *place);
-long	deal_with_sign(long temp, char *out);
+static char	*find_len_and_alloc(long int n, int *place);
+static long	deal_with_sign(long temp, char *out);
 
 char	*ft_itoa(int n)
 {
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	return (out);
 }
 
-long	deal_with_sign(long temp, char *out)
+static long	deal_with_sign(long temp, char *out)
 {
 	out[0] = 0;
 	if (temp < 0)
@@ -54,7 +54,7 @@ long	deal_with_sign(long temp, char *out)
 	return (temp);
 }
 
-char	*find_len_and_alloc(long int n, int *place)
+static char	*find_len_and_alloc(long int n, int *place)
 {
 	int		len;
 

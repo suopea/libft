@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 14:23:53 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 14:08:37 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 11:05:33 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	len;
 
-	if (size == 0 || ft_strlen((char *) src))
+	if (size == 0 || ft_strlen(src))
 		len = 0;
 	else
-		len = ft_strlen((char *) src);
+		len = ft_strlen(src);
 	i = 0;
-	while (i < size - 1 && size > 0)
+	while (i + 1 < size && size > 0)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = 0;
+	if (size > 0)
+		dst[i] = 0;
 	return (len);
 }

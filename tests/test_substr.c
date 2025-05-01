@@ -2,6 +2,7 @@
 #include <limits.h>
 #include <ctype.h>
 #include <string.h>
+#include <malloc.h>
 #include "../libft.h"
 
 void	test(char const *s, unsigned int start, size_t len)
@@ -19,6 +20,7 @@ int main(void)
 	test("0123456789", 0, 0);
 	test("0123456789", 15, 0);
 	test("0123456789", 15, 5);
+	test("0123456789", 8, 5);
 	test("", 0, 0);
 	test("", 0, 12000);
 	test(0, 0, 0);

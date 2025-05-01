@@ -6,38 +6,53 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:50:48 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 15:27:46 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 11:26:56 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*revcopy(void *dest, const void *src, size_t n);
+static void	*forward_copy(char *dest, const char *src, size_t n);
+static void	*rev_copy(char *dest, const char *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (!src || !dest)
-		return (NULL);
-	if (src == dest)
-		return (dest);
-	if (src > dest)
-		return (ft_memcpy(dest, src, n));
-	return (revcopy(dest, src, n));
-}
-
-static void	*revcopy(void *dest, const void *src, size_t n)
-{
-	int			i;
 	const char	*src_c;
 	char		*dest_c;
 
 	src_c = src;
 	dest_c = dest;
+	if (!src || !dest)
+		return (NULL);
+	if (src == dest)
+		return (dest);
+	if (src > dest)
+		return (forward_copy(dest_c, src_c, n));
+	return (rev_copy(dest_c, src_c, n));
+}
+
+static void	*forward_copy(char *dest, const char *src, size_t n)
+{
+	size_t		i;
+
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return ((void *)dest);
+}
+
+static void	*rev_copy(char *dest, const char *src, size_t n)
+{
+	int			i;
+
 	i = n;
 	while (i >= 0)
 	{
-		dest_c[i] = src_c[i];
+		dest[i] = src[i];
 		i--;
 	}
-	return (dest);
+	return ((void *)dest);
 }

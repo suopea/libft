@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:32:08 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 15:43:41 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 12:54:39 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	if (s[i] == c)
 		return ((char *)s + i);
-	return (0);
+	return (NULL);
 }

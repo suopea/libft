@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:30:19 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 16:13:43 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 11:18:44 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	start;
-	size_t	lil_pos;
+	size_t	i_big;
+	size_t	i_lil;
 
 	if (!little || !big)
 		return (NULL);
 	if (!little[0])
 		return ((char *) big);
-	start = 0;
-	len = len - ft_strlen((char *)little);
-	while (big[start] && start <= len)
+	i_big = 0;
+	while (big[i_big] && i_big <= len)
 	{
-		lil_pos = 0;
-		while (little[lil_pos] && little[lil_pos] == big[start + lil_pos])
-			lil_pos++;
-		if (!little[lil_pos])
-			return ((char *)big + start);
-		start++;
+		i_lil = 0;
+		while (little[i_lil] == big[i_big + i_lil]
+			&& little[i_lil] && i_big + i_lil < len)
+			i_lil++;
+		if (!little[i_lil])
+			return ((char *)big + i_big);
+		i_big++;
 	}
 	return (NULL);
 }

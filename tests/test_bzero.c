@@ -49,6 +49,7 @@ int main(void)
 	test(string, 10);
 	test(string, 11);
 	test(string, 12);
+	// test(0, 12);
 
 	printf("\nexample of correct:\n123\n0001337");
 	return(0);	

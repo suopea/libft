@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:10:35 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/18 19:11:28 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 10:50:53 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *c)
+size_t	ft_strlen(const char *c)
 {
 	size_t	i;
 
