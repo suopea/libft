@@ -42,6 +42,7 @@ void	test(size_t nmemb, size_t size)
 int main(void)
 {
 	test(1, 10);
+	test(INT_MIN, INT_MIN);
 	test(100, 10);
 	test(10, 10);
 	test(0, 10);

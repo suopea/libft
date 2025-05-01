@@ -20,4 +20,5 @@ int	main(void)
 	test("          lesgoooo          ", 0, 0);
 	test("          lesgoooo          ", 8, -5);
 	test("          lesgoooo          ", 8, 5);
+	test(0, 8, 5);
 }

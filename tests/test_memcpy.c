@@ -11,7 +11,7 @@ void	test(char *str, size_t n)
 	ft_memset(ft_string, 'x', 30);
 	//strcpy(lib_string, str);
 	//strcpy(ft_string, str);
-	memcpy(lib_string, str, n);
+	// memcpy(lib_string, str, n);
 	ft_memcpy(ft_string, str, n);
 	
 	printf("lib: %s\n ft: %s\n\n", lib_string, ft_string);
@@ -19,6 +19,8 @@ void	test(char *str, size_t n)
 
 int	main(void)
 {
+	test(0, 0);
+	test(0, 1);
 	test("ABCDEFGHIJKLMNOPQRSTU", 0);
 	test("ABCDEFGHIJKLMNOPQRSTU", 1);
 	test("ABCDEFGHIJKLMNOPQRSTU", 2);

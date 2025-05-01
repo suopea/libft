@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:50:48 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/01 15:19:25 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 15:37:13 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const char	*src_c;
 	char		*dest_c;
 
-	src_c = src;
-	dest_c = dest;
 	if (!src || !dest)
 		return (NULL);
+	src_c = src;
+	dest_c = dest;
 	if (src == dest)
 		return (dest);
 	if (src > dest)
