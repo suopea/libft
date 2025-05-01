@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:50:48 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/01 11:26:56 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 15:19:25 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	*rev_copy(char *dest, const char *src, size_t n)
 {
 	int			i;
 
-	i = n;
+	i = n - 1;
 	while (i >= 0)
 	{
 		dest[i] = src[i];
