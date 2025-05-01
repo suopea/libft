@@ -17,11 +17,12 @@ int main(void)
 	char	string[] = "abcdefedcba";
 
 	printf("returned addresses:\n\n");
-//	test(empty_string, 'b');
-//	test(empty_string, 0);
+	test(empty_string, 'b');
+	test(empty_string, 0);
 	test(string, 'e');
 	test(string, 'x');
 	test(string, 'a');
+	printf("char overflow:\n");
 	test(string, 'a' + 256);
 	test(string, 0);
 	return(0);	
