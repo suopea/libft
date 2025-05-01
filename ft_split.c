@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:14:34 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/01 16:47:34 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/01 16:57:37 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	**ft_split(char const *s, char c)
 	char	**out;
 
 	if (!s)
-		return ((char **)calloc(1, sizeof(char *)));
+		return ((char **)ft_calloc(1, sizeof(char *)));
 	out = count_words_and_calloc(s, c);
 	if (!out)
 		return (NULL);
