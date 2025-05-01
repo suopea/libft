@@ -47,4 +47,7 @@ int main(void)
 	test(10, 10);
 	test(0, 10);
 	test(10, 0);
+	test(-1, 1);
+	test(-1, 0);
+	test(0, -1);
 }

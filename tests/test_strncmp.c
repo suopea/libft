@@ -25,6 +25,8 @@ int main(void)
 	test("ab\200de", "abcde", 5);
 	test("ab\200de", "ab\200de", 5);
 	test("abcde", "ab\200de", 5);
+	test("", "abcde", 0);
+	test("abcde", "", 0);
 	test("", "abcde", 4);
 	test("abcde", "", 4);
 	return(0);	
