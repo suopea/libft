@@ -38,4 +38,6 @@ int main(void)
 	test("aaaaa", 'a');
 	test("no delimiter", 'x');
 	test(0, 'x');
+	test(0, 0);
+	test("0 as delimiter", 0);
 }
