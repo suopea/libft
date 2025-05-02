@@ -10,11 +10,12 @@ void	test(const char *src, size_t size)
 
 	size_t lib_size = strlcpy(lib_copy, src, size);
 	size_t ft_size = ft_strlcpy(ft_copy, src, size);
-	if (lib_size == ft_size && strcmp(lib_copy, ft_copy))
+	if (lib_size != ft_size && strcmp(lib_copy, ft_copy))
 		printf("\n\n'%s', size %zu: KO\n\nlib: '%s', %zu\n ft: '%s', %zu\n\n\n", 
 			src, size, lib_copy, lib_size, ft_copy, ft_size);
 	else
-		printf("'%s', %zu: success  (%s)\n", src, size, lib_copy);
+		printf("'%s', %zu: success (%zu, %zu)\nlib '%s'\n ft '%s'\n\n", 
+			src, size, lib_size, ft_size, lib_copy, ft_copy);
 }
 
 int	main(void)

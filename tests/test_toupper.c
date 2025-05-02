@@ -32,5 +32,7 @@ int main(void)
 	test('Z' + 1);
 	test('8');
 	test(-100);
+	test(666);
+	test(-1);
 	return(0);	
 }
