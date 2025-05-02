@@ -33,4 +33,23 @@ int main(void)
 	return(0);	
 	test(-100);
 	test('A' + 256);
+	test('8');
+	test(-100);
+	test(666);
+	test(-1);
+	test(-2);
+	test(-3);
+	test(-127);
+	test(-128);
+	test(-129);
+	test(254);
+	test(255);
+	test(256);
+	test('A' - 256);
+	test('A' - 512);
+	test('A' - 256 - 1);
+	test('A' - 512 - 1);
+	test('a' - 256);
+	test('a' - 512);
+	test(196);
 }

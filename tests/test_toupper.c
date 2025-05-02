@@ -8,11 +8,11 @@ void	test(int c)
 {
 	if (ft_toupper(c) == toupper(c))
 	{
-		printf("%c success\n", c);
+		printf("%c (%i)\t-->  %c (%i)\n", c, c, toupper(c), toupper(c));
 	}
 	else
 	{
-		printf("%c FAILED :(%c)\n", c, ft_toupper(c));
+		printf("%i FAILED :(%i could be %i)\n", c, ft_toupper(c), toupper(c));
 	}
 }
 
@@ -34,5 +34,20 @@ int main(void)
 	test(-100);
 	test(666);
 	test(-1);
+	test(-2);
+	test(-3);
+	test(-127);
+	test(-128);
+	test(-129);
+	test(254);
+	test(255);
+	test(256);
+	test('A' - 256);
+	test('A' - 512);
+	test('A' - 256 - 1);
+	test('A' - 512 - 1);
+	test('a' - 256);
+	test('a' - 512);
+	test(196);
 	return(0);	
 }
