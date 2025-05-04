@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:44:57 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/04 18:56:21 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/04 18:59:41 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > ft_strlen(s))
 		return(ft_strdup(""));
 	if (start + len > ft_strlen(s))
-		len = ft_strlen(s);
+		len = ft_strlen(s) - start;
 	out = malloc(len + 1);
 	if (!out)
 		return (NULL);
