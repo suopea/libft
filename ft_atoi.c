@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:51:28 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 15:35:04 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/05 12:45:24 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr) // TODO is the output var needed
+int	ft_atoi(const char *nptr)
 {
 	int		output;
 	int		sign;

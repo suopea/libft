@@ -6,11 +6,9 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 16:45:11 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/25 16:54:23 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/06 12:32:24 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 	Applies the function ’f’ to each character of the

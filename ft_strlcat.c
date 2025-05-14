@@ -6,16 +6,11 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 16:55:36 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/01 10:58:35 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/05 12:49:35 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-when the buffer is too small, 
-the lib and ft functions do different things :( ??)
-*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

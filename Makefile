@@ -34,13 +34,13 @@ SRC = ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c \
 
-OBJ = $(SRC:.c=.o) 
+OBJ = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror 
+
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $@ $^	
-
-all: $(NAME)
 
 %.o: %.c
 	cc $(FLAGS) -c $<
@@ -54,3 +54,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all re fclean clean
+.SECONDARY: $(OBJ)

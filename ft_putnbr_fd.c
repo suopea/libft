@@ -6,13 +6,13 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:27:59 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/04/30 16:21:48 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/05 10:20:11 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	put_digit(int i, int fd)
+static void	put_digit(int i, int fd)
 {
 	write(fd, &i, 1);
 }

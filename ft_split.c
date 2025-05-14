@@ -6,14 +6,14 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:14:34 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/01 16:57:37 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/05 12:53:33 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static void		fill_with_words(char **out, char const *s, char c);
-static void		*free_everything(char **out);
+static void		free_everything(char **out);
 static size_t	length_of_word(const char *s, char c);
 static char		**count_words_and_calloc(char const *s, char c);
 
@@ -54,12 +54,10 @@ static void	fill_with_words(char **out, char const *s, char c)
 	size_t	read_pos;
 	size_t	word_len;
 	size_t	array_index;
-	int		problem;
 
 	array_index = 0;
 	read_pos = 0;
-	problem = 0;
-	while (s[read_pos] && !problem)
+	while (s[read_pos])
 	{
 		if (s[read_pos] == c)
 			read_pos++;
@@ -67,12 +65,13 @@ static void	fill_with_words(char **out, char const *s, char c)
 		{
 			word_len = length_of_word(s + read_pos, c);
 			out[array_index] = ft_substr(s, read_pos, word_len);
-			if (!out[array_index++])
+			if (!out[array_index])
 			{
 				free_everything(out);
-				problem++;
+				return ;
 			}
 			read_pos += word_len;
+			array_index++;
 		}
 	}
 }
@@ -84,7 +83,7 @@ static size_t	length_of_word(const char *s, char c)
 	return (ft_strchr(s, 0) - s);
 }
 
-static void	*free_everything(char **out)
+static void	free_everything(char **out)
 {
 	size_t	i;
 
@@ -95,5 +94,4 @@ static void	*free_everything(char **out)
 		i++;
 	}
 	free(out);
-	return (NULL);
 }

@@ -6,22 +6,23 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:44:57 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/05/04 18:59:41 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/05/06 12:31:53 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-s: substring source
-start: substring position in source
-len: max length of substring
+	s: substring source
 
-return the substring or NULL if alloc fails
+	start: substring position in source
+	len: max length of substring
 
-Allocates memory using malloc and returns a substring
-from the string s. Substring starts at start and has 
-a maximum length of len
+	return the substring or NULL if alloc fails
+
+	Allocates memory using malloc and returns a substring
+	from the string s. Substring starts at start and has 
+	a maximum length of len
 */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -31,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start > ft_strlen(s))
-		return(ft_strdup(""));
+		return (ft_strdup(""));
 	if (start + len > ft_strlen(s))
 		len = ft_strlen(s) - start;
 	out = malloc(len + 1);
