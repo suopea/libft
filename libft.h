@@ -13,6 +13,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <stdarg.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);
@@ -49,5 +50,8 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_isalnum(int c);
 int		ft_isdigit(int c);
+int		print_base(long long i, char *base);
+int		print_pointer(unsigned long long i);
+int		ft_printf(const char *str, ...);
 
 #endif
