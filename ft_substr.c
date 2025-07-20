@@ -25,7 +25,7 @@
 	a maximum length of len
 */
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*out;
 

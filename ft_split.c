@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-static void		fill_with_words(char **out, char const *s, char c);
+static void		fill_with_words(char **out, const char *s, char c);
 static void		free_everything(char **out);
 static size_t	length_of_word(const char *s, char c);
-static char		**count_words_and_calloc(char const *s, char c);
+static char		**count_words_and_calloc(const char *s, char c);
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**out;
 
@@ -30,7 +30,7 @@ char	**ft_split(char const *s, char c)
 	return (out);
 }
 
-static char	**count_words_and_calloc(char const *s, char c)
+static char	**count_words_and_calloc(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -49,7 +49,7 @@ static char	**count_words_and_calloc(char const *s, char c)
 	return ((char **) ft_calloc(count + 1, sizeof(char *)));
 }
 
-static void	fill_with_words(char **out, char const *s, char c)
+static void	fill_with_words(char **out, const char *s, char c)
 {
 	size_t	read_pos;
 	size_t	word_len;
